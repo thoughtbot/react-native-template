@@ -1,4 +1,4 @@
-package com.projectname;
+package com.{{cookiecutter.package_name}};
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "ProjectName";
+        return "{{cookiecutter.project_name}}";
     }
 }

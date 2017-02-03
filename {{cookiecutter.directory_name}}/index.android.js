@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -12,7 +6,7 @@ import {
   View
 } from 'react-native';
 
-export default class ProjectName extends Component {
+export default class {{cookiecutter.project_name}} extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -50,4 +44,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('ProjectName', () => ProjectName);
+AppRegistry.registerComponent('{{cookiecutter.project_name}}', () => {{cookiecutter.project_name}});

@@ -1,6 +1,7 @@
 {
   "project_name": "ProjectName",
   "directory_name": "{{cookiecutter.project_name}}",
+  "package_name": "{{cookiecutter.project_name | lower}}",
   "_copy_without_render": [
     "android/gradlew",
     "android/gradlew.bat",

@@ -1,4 +1,4 @@
-package com.projectname;
+package com.{{cookiecutter.package_name}};
 
 import android.app.Application;
 import android.util.Log;
