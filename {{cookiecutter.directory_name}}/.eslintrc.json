@@ -1,0 +1,107 @@
+{
+  "parser": "babel-eslint",
+
+  "parserOptions":  {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+
+ "ecmaFeatures": {
+    "arrowFunctions": true,
+    "binaryLiterals": true,
+    "blockBindings": true,
+    "classes": true,
+    "defaultParams": true,
+    "destructuring": true,
+    "forOf": true,
+    "generators": true,
+    "modules": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralDuplicateProperties": true,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "octalLiterals": true,
+    "regexUFlag": true,
+    "regexYFlag": true,
+    "spread": true,
+    "superInFunctions": true,
+    "templateStrings": true,
+    "unicodeCodePointEscapes": true,
+    "globalReturn": true,
+    "jsx": true
+  },
+
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+
+  "globals": {
+    "jQuery": false,
+    "$": false,
+    "_": false,
+    "fetch": false,
+    "console": false
+  },
+
+  "rules": {
+    "no-empty": [2, { "allowEmptyCatch": true }],
+    "brace-style": [2, "1tbs", { "allowSingleLine": true }],
+    "no-multiple-empty-lines": 2,
+    "one-var": [2, { "uninitialized": "always", "initialized": "never" }],
+    "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+    "space-unary-ops": [2, { "words": false, "nonwords": false }],
+    "semi-spacing": [2, { "before": false, "after": true }],
+    "space-before-function-paren": [2, "never"],
+    "space-in-parens": [2, "never"],
+    "no-spaced-func": 2,
+    "comma-dangle": [2, "always-multiline"],
+    "no-trailing-spaces": 2,
+    "no-var": 2,
+    "camelcase": 0,
+    "comma-style": [2, "last"],
+    "curly": [2, "all"],
+    "dot-notation": 2,
+    "object-shorthand": 2,
+    "operator-linebreak": [2, "after"],
+    "arrow-parens": 0,
+    "semi": [2, "always"],
+    "space-infix-ops": 2,
+    "keyword-spacing": [
+      2,
+      {
+        "overrides": {
+          "else": { "before": true },
+          "while": { "before": true },
+          "catch": { "before": true }
+        }
+      }
+    ],
+    "spaced-comment": [2, "always"],
+    "space-before-blocks": [2, "always"],
+    "array-bracket-spacing": [2, "always"],
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "quotes": [2, "single", { "avoidEscape": true }],
+
+    "react-native/split-platform-components": 2,
+    "react/display-name": 0,
+    "react/jsx-boolean-value": 0,
+    "jsx-quotes": [1, "prefer-double"],
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "react/no-multi-comp": 0,
+    "react/no-unknown-property": 0,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/self-closing-comp": 1,
+    "react/wrap-multilines": 0,
+    "react/jsx-no-undef": 2
+  }
+}
