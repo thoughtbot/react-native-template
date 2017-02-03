@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+rm -rf TestProject
+
+cookiecutter \
+  --verbose \
+  --no-input \
+  --config-file bin/test-config.yml \
+  .

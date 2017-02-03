@@ -1,0 +1,10 @@
+{
+  "project_name": "ProjectName",
+  "directory_name": "{{cookiecutter.project_name}}",
+  "_copy_without_render": [
+    "android/gradlew",
+    "android/gradlew.bat",
+    "android/gradle/wrapper/gradle-wrapper.jar",
+    "*node_modules"
+  ]
+}
