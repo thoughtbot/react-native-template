@@ -1,0 +1,20 @@
+{
+  "name": "TemplateProject",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "react": "~15.4.0-rc.4",
+    "react-native": "0.41.1"
+  },
+  "devDependencies": {
+    "babel-preset-react-native": "1.9.1",
+    "eslint": "^3.15.0",
+    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-react-native": "^2.2.1",
+    "react-test-renderer": "~15.4.0-rc.4"
+  }
+}
