@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+if ! command -v yarn >/dev/null; then
+  echo >&2 "It looks like you don't have Yarn installed:"
+  echo >&2 "see https://yarnpkg.com/docs/install for instructions."
+  echo >&2
+  echo >&2 "After installing Yarn, navigate to the project directory and run 'bin/setup'."
+  exit 1
+fi
+
+yarn install

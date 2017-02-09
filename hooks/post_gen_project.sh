@@ -2,5 +2,5 @@
 
 set -e
 
-# bin/setup
+bin/setup
 git init
