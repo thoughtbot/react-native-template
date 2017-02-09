@@ -1,17 +1,27 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
+sed_in_place() {
+  if [ "$(uname)" = "Darwin" ]; then
+    sed -i '' "$@"
+  else
+    sed -i "$@"
+  fi
+}
+
+export -f sed_in_place
+
 replace() {
-  from=$1
-  to=$2
+  from="$1"
+  to="$2"
 
   export LC_ALL="C" # fix illegal byte sequence error from sed
   find TmpProject \( -type d -name "node_modules" \) -prune -o \
     -type f ! -name "gradlew" ! -name "gradlew.bat" ! -name "gradle-wrapper.jar" -print0 \
-    | xargs -0 sed -i '' -e "s/$from/$to/g"
+    | xargs -0 /bin/bash -c 'sed_in_place "$@"' _ -e "s/$from/$to/g"
 
-  find TmpProject \( -type d -name "node_modules" \) -prune -o -d -name "$from*" -print0 \
+  find TmpProject -depth \( -type d -name "node_modules" \) -prune -o -name "$from*" -print0 \
     | xargs -0 rename "s/$from([^\/]*)$/$to\$1/"
 }
 
