@@ -6,16 +6,15 @@ replace() {
   from="$1"
   to="$2"
 
-  find TmpProject \( -type d -name "node_modules" \) -prune -o \
-    -type f ! -name "gradlew" ! -name "gradlew.bat" ! -name "gradle-wrapper.jar" -print0 \
+  find TmpProject -type f ! -name "gradlew" ! -name "gradlew.bat" ! -name "gradle-wrapper.jar" -print0 \
     | xargs -0 perl -i -pe "s/$from/$to/g"
 
-  find TmpProject -depth \( -type d -name "node_modules" \) -prune -o -name "$from*" -print0 \
+  find TmpProject -depth -name "$from*" -print0 \
     | xargs -0 rename "s/$from([^\/]*)$/$to\$1/"
 }
 
 rm -rf TmpProject
-cp -r TemplateProject TmpProject
+rsync -r --exclude=node_modules --exclude="**/ios/build" TemplateProject/ TmpProject
 
 replace "TemplateProject" "{{cookiecutter.project_name}}"
 replace "templateproject" "{{cookiecutter.package_name}}"
