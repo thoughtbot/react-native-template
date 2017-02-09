@@ -1,6 +1,7 @@
 dependencies:
   pre:
     - pip install cookiecutter
+    - yarn global add react-native-cli
 
 test:
   pre:
