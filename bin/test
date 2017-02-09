@@ -9,3 +9,5 @@ cookiecutter \
   --no-input \
   --config-file bin/test-config.yml \
   .
+
+cd TestProject && bin/test
