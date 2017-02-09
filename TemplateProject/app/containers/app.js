@@ -2,6 +2,7 @@ import React from 'react';
 import { StatusBar, StyleSheet, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import Welcome from '../screens/welcome'
+import styles, { ralph } from '../styles';
 
 const routes = {
   Welcome: {screen: Welcome},
@@ -11,9 +12,9 @@ const config = {
   navigationOptions: {
     header: {
       style: {
-        backgroundColor: '#ed3e44',
+        backgroundColor: ralph.primaryColor,
       },
-      tintColor: 'white',
+      tintColor: ralph.backgroundColor,
     },
   },
 };
@@ -26,11 +27,5 @@ const App = () => (
     <Navigator />
   </View>
 );
-
-const styles = StyleSheet.create({
-  app: {
-    flex: 1,
-  },
-});
 
 export default App;

@@ -37,33 +37,6 @@ class Welcome extends Component {
   }
 };
 
-const styles = StyleSheet.create({
-  text: {
-    color: '#29292c',
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    marginBottom: 5,
-  },
-  buttons: {
-    flexDirection: 'row',
-  },
-  button: {
-    margin: 5,
-  },
-});
-
 export default connect(
   ({counter}) => counter,
   {
