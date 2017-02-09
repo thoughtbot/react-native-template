@@ -9,23 +9,23 @@ class App extends Component {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
+        <Text style={[styles.welcome, styles.text]}>
           Welcome to React Native!
         </Text>
-        <Text style={styles.instructions}>
+        <Text style={[styles.instructions, styles.text]}>
           To get started, edit app/containers/app.js
         </Text>
-        <Text style={styles.instructions}>
+        <Text style={[styles.instructions, styles.text]}>
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
-        <Text>Counter: {value}</Text>
+        <Text style={styles.text}>Counter: {value}</Text>
         <View style={styles.buttons}>
           <TouchableOpacity style={styles.button} onPress={decrement}>
-            <Text>Decrement</Text>
+            <Text style={styles.text}>Decrement</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={increment}>
-            <Text>Increment</Text>
+            <Text style={styles.text}>Increment</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -34,11 +34,14 @@ class App extends Component {
 };
 
 const styles = StyleSheet.create({
+  text: {
+    color: '#29292c',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'white',
   },
   welcome: {
     fontSize: 20,
@@ -47,7 +50,6 @@ const styles = StyleSheet.create({
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
     marginBottom: 5,
   },
   buttons: {
