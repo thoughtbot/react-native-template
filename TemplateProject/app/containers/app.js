@@ -1,14 +1,10 @@
 import React from 'react';
 import { StatusBar, StyleSheet, View } from 'react-native';
-import { StackNavigator } from 'react-navigation';
-import Welcome from '../screens/welcome'
+import { StackNavigator, TabNavigator } from 'react-navigation';
+import { Counter, Welcome } from '../screens';
 import styles, { ralph } from '../styles';
 
-const routes = {
-  Welcome: {screen: Welcome},
-};
-
-const config = {
+const stackConfig = {
   navigationOptions: {
     header: {
       style: {
@@ -19,12 +15,29 @@ const config = {
   },
 };
 
-const Navigator = StackNavigator(routes, config);
+const tabConfig = {
+  tabBarOptions: {
+    activeTintColor: ralph.primaryColor,
+  },
+};
+
+const WelcomeNavigator = StackNavigator({
+  Welcome: {screen: Welcome},
+}, stackConfig);
+
+const CounterNavigator = StackNavigator({
+  Counter: {screen: Counter},
+}, stackConfig);
+
+const AppNavigator = TabNavigator({
+  Welcome: {screen: WelcomeNavigator},
+  Counter: {screen: CounterNavigator},
+}, tabConfig);
 
 const App = () => (
   <View style={styles.app}>
     <StatusBar barStyle='light-content' />
-    <Navigator />
+    <AppNavigator />
   </View>
 );
 
