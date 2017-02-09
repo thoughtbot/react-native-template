@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, View } from 'react-native';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import Welcome from '../screens/welcome'
 
@@ -21,10 +21,16 @@ const config = {
 const Navigator = StackNavigator(routes, config);
 
 const App = () => (
-  <View style={{flex: 1}}>
+  <View style={styles.app}>
     <StatusBar barStyle='light-content' />
     <Navigator />
   </View>
 );
+
+const styles = StyleSheet.create({
+  app: {
+    flex: 1,
+  },
+});
 
 export default App;
