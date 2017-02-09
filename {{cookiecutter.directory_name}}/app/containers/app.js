@@ -1,69 +1,30 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { connect } from 'react-redux';
-import * as counterActions  from '../redux/modules/counter';
+import React from 'react';
+import { StatusBar, View } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+import Welcome from '../screens/welcome'
 
-class App extends Component {
-  render() {
-    const {value, increment, decrement} = this.props;
-
-    return (
-      <View style={styles.container}>
-        <Text style={[styles.welcome, styles.text]}>
-          Welcome to React Native!
-        </Text>
-        <Text style={[styles.instructions, styles.text]}>
-          To get started, edit app/containers/app.js
-        </Text>
-        <Text style={[styles.instructions, styles.text]}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-        <Text style={styles.text}>Counter: {value}</Text>
-        <View style={styles.buttons}>
-          <TouchableOpacity style={styles.button} onPress={decrement}>
-            <Text style={styles.text}>Decrement</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={increment}>
-            <Text style={styles.text}>Increment</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-    );
-  }
+const routes = {
+  Welcome: {screen: Welcome},
 };
 
-const styles = StyleSheet.create({
-  text: {
-    color: '#29292c',
+const config = {
+  navigationOptions: {
+    header: {
+      style: {
+        backgroundColor: '#ed3e44',
+      },
+      tintColor: 'white',
+    },
   },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    marginBottom: 5,
-  },
-  buttons: {
-    flexDirection: 'row',
-  },
-  button: {
-    margin: 5,
-  },
-});
+};
 
-export default connect(
-  ({counter}) => counter,
-  {
-    increment: counterActions.increment,
-    decrement: counterActions.decrement,
-  }
-)(App);
+const Navigator = StackNavigator(routes, config);
+
+const App = () => (
+  <View style={{flex: 1}}>
+    <StatusBar barStyle='light-content' />
+    <Navigator />
+  </View>
+);
+
+export default App;
