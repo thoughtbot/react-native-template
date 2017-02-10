@@ -22,3 +22,13 @@ if ! command -v react-native; then
   echo >&2 "for more information."
   exit 1
 fi
+
+if [ ! -f .env.local ]; then
+  echo "Copying .sample.env to .env.local"
+  cp .sample.env .env.local
+fi
+
+if [ ! -f .env ]; then
+  echo "Copying .sample.env to .env.production"
+  cp .sample.env .env.production
+fi
