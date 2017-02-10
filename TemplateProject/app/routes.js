@@ -1,21 +1,30 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import { Counter, Welcome } from './screens';
-import { ralph } from './styles';
+import { colors } from './styles';
 
 const stackConfig = {
   navigationOptions: {
     headerStyle: {
-      backgroundColor: ralph.primaryColor,
+      backgroundColor: colors.primary,
     },
-    headerTintColor: ralph.backgroundColor,
+    headerTintColor: colors.background,
   },
 };
 
 const tabConfig = {
-  tabBarOptions: {
-    activeTintColor: ralph.primaryColor,
-  },
+  tabBarOptions: Platform.select({
+    ios: {
+      activeTintColor: colors.primary,
+    },
+    android: {
+      activeTintColor: colors.background,
+      style: {
+        backgroundColor: colors.primary,
+      },
+    },
+  }),
 };
 
 const WelcomeNavigator = StackNavigator({
