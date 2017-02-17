@@ -1,0 +1,45 @@
+# vim: ft-ruby
+
+fastlane_version "2.24.0"
+
+platform :ios do
+  project = "./ios/TemplateProject.xcodeproj"
+
+  desc "Bulid the app for distribution"
+  lane :build do
+    gym(project: project, scheme: "TemplateProject", include_bitcode: true)
+  end
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    ensure_git_status_clean
+    increment_build_number(
+      build_number: latest_testflight_build_number + 1,
+      xcodeproj: project,
+    )
+    commit_version_bump(xcodeproj: project)
+    build
+    pilot
+  end
+
+  desc "Create a new version on the App Store"
+  desc "This assumes the build on TestFlight is the same version"
+  lane :release do
+    deliver(force: true, skip_binary_upload: true)
+  end
+end
+
+platform :android do
+  desc "Bulid the app for release"
+  lane :build do
+    gradle(task: "clean", project_dir: "android/")
+    gradle(task: "assembleRelease", project_dir: "android/")
+  end
+
+  desc "Submit a new Beta Build to the Google Play Store"
+  lane :beta do
+    build
+    supply(track: "beta")
+  end
+end
