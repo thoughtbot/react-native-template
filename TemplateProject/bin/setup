@@ -2,6 +2,10 @@
 
 set -e
 
+# Set up Ruby dependencies via Bundler
+gem install bundler --conservative
+bundle check || bundle install
+
 if ! command -v yarn >/dev/null; then
   echo >&2 "It looks like you don't have Yarn installed:"
   echo >&2 "see https://yarnpkg.com/docs/install for instructions."
