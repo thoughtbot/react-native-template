@@ -10,7 +10,7 @@ Inspired by [suspenders], and [django-template].
 ## What's in the template?
 
 - [yarn][]
-- [redux][] and [react-redux][]
+- [redux][] and [redux-thunk][]
 - [remote-redux-devtools][]
 - [react-navigation][]
 - [eslint][]
@@ -19,7 +19,7 @@ Inspired by [suspenders], and [django-template].
 
 [yarn]: https://yarnpkg.com/
 [redux]: http://redux.js.org/
-[react-redux]: https://github.com/reactjs/react-redux
+[redux-thunk]: https://github.com/gaearon/redux-thunk
 [remote-redux-devtools]: https://github.com/zalmoxisus/remote-redux-devtools
 [react-navigation]: https://reactnavigation.org/
 [eslint]: http://eslint.org/
