@@ -9,7 +9,21 @@ Inspired by [suspenders], and [django-template].
 
 ## What's in the template?
 
-- TODO
+- [yarn][]
+- [redux][] and [react-redux][]
+- [remote-redux-devtools][]
+- [react-navigation][]
+- [eslint][]
+- [jest][]
+- ...and an example app to use as a starting point
+
+[yarn]: https://yarnpkg.com/
+[redux]: http://redux.js.org/
+[react-redux]: https://github.com/reactjs/react-redux
+[remote-redux-devtools]: https://github.com/zalmoxisus/remote-redux-devtools
+[react-navigation]: https://reactnavigation.org/
+[eslint]: http://eslint.org/
+[jest]: https://facebook.github.io/jest/
 
 ## Usage
 
