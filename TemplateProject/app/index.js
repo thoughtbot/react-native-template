@@ -12,4 +12,6 @@ const TemplateProject = () => {
   );
 };
 
+export default TemplateProject;
+
 AppRegistry.registerComponent('TemplateProject', () => TemplateProject);
