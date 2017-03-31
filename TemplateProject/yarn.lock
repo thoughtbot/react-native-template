@@ -3504,9 +3504,9 @@ react-proxy@^1.1.7:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
 
-react-redux@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.2.tgz#3d9878f5f71c6fafcd45de1fbb162ea31f389814"
+react-redux@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.3.tgz#86c3b68d56e74294a42e2a740ab66117ef6c019f"
   dependencies:
     hoist-non-react-statics "^1.0.3"
     invariant "^2.0.0"
