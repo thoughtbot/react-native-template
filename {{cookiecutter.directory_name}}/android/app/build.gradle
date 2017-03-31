@@ -1,4 +1,10 @@
 apply plugin: "com.android.application"
+project.ext.envConfigFiles = [
+  debug: ".env.local",
+  release: ".env.production",
+  anycustombuildlowercase: ".env.local",
+]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 import com.android.build.OutputFile
 
@@ -126,6 +132,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-config')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
