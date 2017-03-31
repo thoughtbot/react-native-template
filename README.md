@@ -13,6 +13,7 @@ Inspired by [suspenders], and [django-template].
 - [redux][] and [redux-thunk][]
 - [remote-redux-devtools][]
 - [react-navigation][]
+- [react-native-config][]
 - [eslint][]
 - [jest][]
 - ...and an example app to use as a starting point
@@ -22,6 +23,7 @@ Inspired by [suspenders], and [django-template].
 [redux-thunk]: https://github.com/gaearon/redux-thunk
 [remote-redux-devtools]: https://github.com/zalmoxisus/remote-redux-devtools
 [react-navigation]: https://reactnavigation.org/
+[react-native-config]: https://github.com/luggit/react-native-config
 [eslint]: http://eslint.org/
 [jest]: https://facebook.github.io/jest/
 
