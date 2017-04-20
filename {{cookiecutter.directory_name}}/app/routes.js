@@ -5,12 +5,10 @@ import { ralph } from './styles';
 
 const stackConfig = {
   navigationOptions: {
-    header: {
-      style: {
-        backgroundColor: ralph.primaryColor,
-      },
-      tintColor: ralph.backgroundColor,
+    headerStyle: {
+      backgroundColor: ralph.primaryColor,
     },
+    headerTintColor: ralph.backgroundColor,
   },
 };
 
