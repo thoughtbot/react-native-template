@@ -1,0 +1,27 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "interface-name": false,
+    "object-literal-sort-keys": false,
+    "member-access": false,
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-pascal-case",
+        "allow-leading-underscore"
+      ]
+    },
+    "quotemark": {
+      "options": [
+        "single",
+        "avoid-escape"
+      ]
+    }
+  },
+  "rulesDirectory": []
+}

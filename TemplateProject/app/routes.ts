@@ -1,4 +1,3 @@
-import React from 'react';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import { Counter, Welcome } from './screens';
 import { ralph } from './styles';

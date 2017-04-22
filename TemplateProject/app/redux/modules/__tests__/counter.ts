@@ -1,4 +1,4 @@
-import reducer, { INITIAL_STATE, increment, decrement } from '../counter';
+import reducer, { decrement, increment, INITIAL_STATE } from '../counter';
 
 test('increment', () => {
   expect(reducer(INITIAL_STATE, increment())).toMatchSnapshot();

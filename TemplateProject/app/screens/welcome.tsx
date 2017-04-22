@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import styles from '../styles';
 
-class Welcome extends Component {
+class Welcome extends Component<{}, {}> {
   static navigationOptions = {
     title: 'TemplateProject',
   };
@@ -23,6 +23,6 @@ class Welcome extends Component {
       </View>
     );
   }
-};
+}
 
 export default Welcome;
