@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0620"
-   version = "1.3">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "NO"
       buildImplicitDependencies = "YES">
@@ -11,6 +11,15 @@
             <ActionContent
                title = "Run Script"
                scriptText = "if [ &quot;$CONFIGURATION&quot; = &quot;Debug&quot; ]; then&#10;    echo &quot;.env.local&quot; &gt; /tmp/envfile&#10;else&#10;    echo &quot;.env.production&quot; &gt; /tmp/envfile&#10;fi">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+                     BuildableName = "TemplateProject.app"
+                     BlueprintName = "TemplateProject"
+                     ReferencedContainer = "container:TemplateProject.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
             </ActionContent>
          </ExecutionAction>
       </PreActions>
