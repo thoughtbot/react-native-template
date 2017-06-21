@@ -1,2 +1,6 @@
 default_context:
   project_name: "TestProject"
+  company_name: "thoughtbot"
+  directory_name": "TestProject"
+  package_name: "com.thoughtbot.testproject"
+  package_path: "com/thoughtbot/testproject"
