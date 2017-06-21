@@ -1,0 +1,79 @@
+# vim: ft=ruby
+# Customise this file, documentation can be found here:
+# https://github.com/KrauseFx/fastlane/tree/master/docs
+# All available actions: https://github.com/KrauseFx/fastlane/blob/master/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+
+desc "Bump the app versions and tag a new release"
+lane :bump_version do |options|
+  type = options.fetch(:type, "build")
+  should_push = options.fetch(:push, true)
+
+  unless increment_mobile_versions(type: type)
+    next
+  end
+
+  # We need to add one to the number of commits to compensate for the commit we
+  # are about to create
+  build_number = commits_on_master + 1
+
+  commit_and_tag_release(
+    version: get_version_number,
+    build_number: build_number,
+    files: %w(
+      ios/{{cookiecutter.project_name}}/Info.plist
+      ios/{{cookiecutter.project_name}}Tests/Info.plist
+      android/gradle.properties
+    ),
+  )
+
+  if should_push
+    push_to_git_remote
+  end
+end
+
+platform :ios do
+  desc "Build the iOS app with the specified scheme"
+  lane :build do |options|
+    scheme = options.fetch(:scheme, "{{cookiecutter.project_name}}")
+
+    gym(scheme: scheme)
+  end
+
+  desc "Submit a new iOS build to Apple TestFlight"
+  lane :beta do
+    build()
+    testflight()
+  end
+
+  desc "Submit a new iOS build to the Apple App Store"
+  lane :release do |options|
+    build()
+    testflight()
+  end
+end
+
+platform :android do
+  desc "Build the Android app with the specified build type"
+  lane :build do |options|
+    type = options.fetch(:type, "Release")
+
+    gradle(task: 'clean')
+    gradle(
+      task: "assemble",
+      build_type: type,
+    )
+  end
+
+  desc "Submit a new build to the Google Play beta channel"
+  lane :beta do
+    build(type: "Release")
+    supply(track: "beta", apk: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}")
+  end
+
+  desc "Submit a new build to the Google Play store"
+  lane :release do
+    build(type: "Release")
+    supply(track: "alpha", apk: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}")
+  end
+end

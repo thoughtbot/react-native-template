@@ -1,0 +1,7 @@
+# vim: ft=ruby
+
+git_url "{{cookiecutter.match_url}}"
+
+type "development" # The default type, can be: appstore, adhoc, enterprise or development
+
+app_identifier ["{{cookiecutter.bundle_identifier}}"]

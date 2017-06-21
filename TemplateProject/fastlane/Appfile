@@ -1,0 +1,4 @@
+# vim: ft=ruby
+
+json_key_file "android/app/{{cookiecutter.project_name | lower}}.json"
+package_name "{{cookiecutter.package_name}}"

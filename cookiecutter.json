@@ -2,6 +2,10 @@
   "project_name": "ProjectName",
   "directory_name": "{{cookiecutter.project_name}}",
   "package_name": "{{cookiecutter.project_name | lower}}",
+  "company_name": "thoughtbot",
+  "match_url": "git@github.com:{{company_name | lower}}/{{cookiecutter.project_name | lower}}-codesigning.git",
+  "package_name": "com.{{cookiecutter.company_name | lower}}",
+  "bundle_identifier": "{{cookiecutter.package_name}}.{{cookiecutter.project_name | lower}}",
   "_copy_without_render": [
     "android/gradlew",
     "android/gradlew.bat",
