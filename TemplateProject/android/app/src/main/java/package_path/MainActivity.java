@@ -1,4 +1,4 @@
-package com.{{cookiecutter.package_name}};
+package com.company-name.templateproject;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "{{cookiecutter.project_name}}";
+        return "TemplateProject";
     }
 }

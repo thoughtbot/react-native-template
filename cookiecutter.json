@@ -2,7 +2,8 @@
   "project_name": "ProjectName",
   "company_name": "thoughtbot",
   "directory_name": "{{cookiecutter.project_name}}",
-  "package_name": "{{cookiecutter.project_name | lower}}",
+  "package_name": "com.{{cookiecutter.company_name | replace(' ', '-') | lower}}.{{cookiecutter.project_name | replace(' ', '-') | lower}}",
+  "package_path": "{{cookiecutter.package_name | replace('.', '/')}}",
   "_copy_without_render": [
     "android/gradlew",
     "android/gradlew.bat",

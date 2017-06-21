@@ -1,4 +1,4 @@
-package com.{{cookiecutter.package_name}};
+package {{cookiecutter.package_name}};
 
 import android.app.Application;
 
