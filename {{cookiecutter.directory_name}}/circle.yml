@@ -1,0 +1,8 @@
+dependencies:
+  override:
+    - bin/setup
+  cache_directories:
+    - ~/.cache/yarn
+test:
+  override:
+    - yarn test -- --runInBand
