@@ -1,5 +1,6 @@
 {
   "project_name": "ProjectName",
+  "company_name": "thoughtbot",
   "directory_name": "{{cookiecutter.project_name}}",
   "package_name": "{{cookiecutter.project_name | lower}}",
   "_copy_without_render": [

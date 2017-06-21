@@ -18,6 +18,7 @@ rsync -r --exclude=node_modules --exclude="**/ios/build" TemplateProject/ TmpPro
 
 replace "TemplateProject" "{{cookiecutter.project_name}}"
 replace "templateproject" "{{cookiecutter.package_name}}"
+replace "CompanyName" "{{cookiecutter.company_name}}"
 
 rm -rf "{{cookiecutter.directory_name}}"
 mv TmpProject "{{cookiecutter.directory_name}}"
