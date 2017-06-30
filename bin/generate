@@ -17,7 +17,7 @@ rm -rf TmpProject
 rsync -r --exclude=node_modules --exclude="**/ios/build" TemplateProject/ TmpProject
 
 replace "TemplateProject" "{{cookiecutter.project_name}}"
-replace "com.company-name.templateproject" "{{cookiecutter.package_name}}"
+replace "com.companyname.templateproject" "{{cookiecutter.package_name}}"
 replace "package_path" "{{cookiecutter.package_path}}"
 replace "CompanyName" "{{cookiecutter.company_name}}"
 

@@ -1,4 +1,4 @@
-package com.company-name.templateproject;
+package com.companyname.templateproject;
 
 import android.app.Application;
 
