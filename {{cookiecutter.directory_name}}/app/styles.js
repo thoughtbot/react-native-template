@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
-const ralph = {
-  primaryColor: '#ed3e44',
-  secondaryColor: '#29292c',
-  backgroundColor: 'white',
+const colors = {
+  primary: '#ed3e44',
+  secondary: '#29292c',
+  background: 'white',
 };
 
 const styles = StyleSheet.create({
@@ -12,13 +12,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   text: {
-    color: ralph.secondaryColor,
+    color: colors.secondary,
   },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: ralph.backgroundColor,
+    backgroundColor: colors.background,
   },
   welcome: {
     fontSize: 20,
@@ -37,5 +37,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export { ralph };
+export { colors };
 export default styles;
