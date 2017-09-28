@@ -1,8 +1,8 @@
-import React from 'react'
-import { Platform } from 'react-native'
-import { StackNavigator, TabNavigator } from 'react-navigation'
-import { Counter, Welcome } from './screens'
-import { colors } from './styles'
+import React from "react"
+import { Platform } from "react-native"
+import { StackNavigator, TabNavigator } from "react-navigation"
+import { Counter, Welcome } from "./screens"
+import { colors } from "./styles"
 
 const stackConfig = {
   navigationOptions: {

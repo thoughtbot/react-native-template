@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { Text, TouchableOpacity, View } from 'react-native'
-import { connect } from 'react-redux'
-import styles from '../styles'
-import * as counterActions from '../redux/modules/counter'
+import React, { Component } from "react"
+import { Text, TouchableOpacity, View } from "react-native"
+import { connect } from "react-redux"
+import styles from "../styles"
+import * as counterActions from "../redux/modules/counter"
 
 class Counter extends Component {
   static navigationOptions = {
-    title: 'Counter',
+    title: "Counter",
   }
 
   render() {

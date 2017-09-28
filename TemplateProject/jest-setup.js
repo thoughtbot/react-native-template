@@ -1,5 +1,5 @@
 // Temporary until https://github.com/facebook/react-native/pull/13049
-jest.mock('Linking', () => {
+jest.mock("Linking", () => {
   return {
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
@@ -10,12 +10,12 @@ jest.mock('Linking', () => {
 })
 
 // Temporary until https://github.com/facebook/react-native/pull/13048
-jest.mock('ScrollView', () => {
-  const React = require('React')
-  const View = require('View')
-  const requireNativeComponent = require('requireNativeComponent')
-  const RCTScrollView = requireNativeComponent('RCTScrollView')
-  const ScrollViewComponent = jest.genMockFromModule('ScrollView')
+jest.mock("ScrollView", () => {
+  const React = require("React")
+  const View = require("View")
+  const requireNativeComponent = require("requireNativeComponent")
+  const RCTScrollView = requireNativeComponent("RCTScrollView")
+  const ScrollViewComponent = jest.genMockFromModule("ScrollView")
 
   class ScrollViewMock extends ScrollViewComponent {
     render() {
