@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import styles from '../styles';
+import React, { Component } from 'react'
+import { Text, View } from 'react-native'
+import styles from '../styles'
 
 class Welcome extends Component {
   static navigationOptions = {
     title: 'TemplateProject',
-  };
+  }
 
   render() {
     return (
@@ -21,8 +21,8 @@ class Welcome extends Component {
           Cmd+D or shake for dev menu
         </Text>
       </View>
-    );
+    )
   }
 }
 
-export default Welcome;
+export default Welcome

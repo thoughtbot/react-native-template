@@ -71,7 +71,7 @@
     "object-shorthand": 2,
     "operator-linebreak": [2, "after"],
     "arrow-parens": 0,
-    "semi": [2, "always"],
+    "semi": [2, "never"],
     "space-infix-ops": 2,
     "keyword-spacing": [
       2,
