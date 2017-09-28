@@ -23,6 +23,6 @@ class Welcome extends Component {
       </View>
     );
   }
-};
+}
 
 export default Welcome;

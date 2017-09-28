@@ -27,19 +27,26 @@ const tabConfig = {
   }),
 };
 
-const WelcomeNavigator = StackNavigator({
-  Welcome: {screen: Welcome},
-}, stackConfig);
+const WelcomeNavigator = StackNavigator(
+  {
+    Welcome: { screen: Welcome },
+  },
+  stackConfig
+);
 
-const CounterNavigator = StackNavigator({
-  Counter: {screen: Counter},
-}, stackConfig);
+const CounterNavigator = StackNavigator(
+  {
+    Counter: { screen: Counter },
+  },
+  stackConfig
+);
 
-const AppNavigator = TabNavigator({
-  Welcome: {screen: WelcomeNavigator},
-  Counter: {screen: CounterNavigator},
-}, tabConfig);
+const AppNavigator = TabNavigator(
+  {
+    Welcome: { screen: WelcomeNavigator },
+    Counter: { screen: CounterNavigator },
+  },
+  tabConfig
+);
 
-export {
-  AppNavigator,
-};
+export { AppNavigator };

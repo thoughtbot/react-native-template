@@ -22,9 +22,7 @@ jest.mock('ScrollView', () => {
       return (
         <RCTScrollView {...this.props}>
           {this.props.refreshControl}
-          <View>
-            {this.props.children}
-          </View>
+          <View>{this.props.children}</View>
         </RCTScrollView>
       );
     }
@@ -32,4 +30,3 @@ jest.mock('ScrollView', () => {
 
   return ScrollViewMock;
 });
-
