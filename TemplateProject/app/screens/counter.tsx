@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import { connect } from "react-redux";
+import { connect, Dispatch } from "react-redux";
 
 import styles from "app/styles";
-import * as counterActions from "app/redux/modules/counter";
+import * as counter from "app/redux/modules/counter/actions";
+import { AppState } from "app/types";
 
 export interface Props {
-  value: number;
+  decrement?: () => void;
+  increment?: () => void;
+  value?: number;
 }
 
 class Counter extends Component<Props> {
@@ -33,7 +36,9 @@ class Counter extends Component<Props> {
   }
 }
 
-export default connect(({ counter }) => counter, {
-  increment: counterActions.increment,
-  decrement: counterActions.decrement,
-})(Counter);
+const mapStateToProps = ({ counter }: AppState): Props => counter;
+
+const mapDispatchToProps = (dispatch: Dispatch<counter.CounterAction>): Props =>
+  counter;
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
