@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { connect } from "react-redux";
-import styles from "../styles";
-import * as counterActions from "../redux/modules/counter";
 
-class Counter extends Component {
+import styles from "app/styles";
+import * as counterActions from "app/redux/modules/counter";
+
+export interface Props {
+  value: number;
+}
+
+class Counter extends Component<Props> {
   static navigationOptions = {
     title: "Counter",
   };

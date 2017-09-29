@@ -1,7 +1,8 @@
 import React from "react";
 import { StatusBar, StyleSheet, View } from "react-native";
-import { AppNavigator } from "../routes";
-import styles from "../styles";
+
+import { AppNavigator } from "app/routes";
+import styles from "app/styles";
 
 const App = () => (
   <View style={styles.app}>

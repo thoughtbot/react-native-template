@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "fix": "prettier --write '{*,{__mocks__,__tests__,app}/**/*}.js'",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "lint": "eslint .",
     "jest": "jest",
-    "test": "bin/test"
+    "lint": "eslint .",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "bin/test",
+    "typecheck": "tslint --project . --type-check"
   },
   "dependencies": {
     "react": "16.0.0-alpha.12",
-    "react-native": "0.45.0",
+    "react-native": "0.48.4",
     "react-native-config": "^0.3.1",
     "react-navigation": "1.0.0-beta.8",
     "react-redux": "^5.0.3",
@@ -19,25 +20,37 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "@types/jest": "^21.1.1",
+    "@types/react": "^16.0.7",
+    "@types/react-native": "^0.48.9",
     "babel-eslint": "^7.2.1",
-    "babel-jest": "^19.0.0",
-    "babel-preset-react-native": "^1.9.2",
+    "babel-jest": "^21.2.0",
+    "babel-preset-react-native": "^4.0.0",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
     "eslint-plugin-react-native": "^2.3.1",
     "jest": "^19.0.2",
     "prettier": "^1.7.2",
+    "react-native-typescript-transformer": "^1.1.4",
     "react-test-renderer": "16.0.0-alpha.12",
     "redux-mock-store": "^1.2.2",
-    "remote-redux-devtools": "^0.5.7"
+    "remote-redux-devtools": "^0.5.7",
+    "ts-jest": "^21.0.1",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3"
   },
   "jest": {
     "preset": "react-native",
-    "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-navigation|react-clone-referenced-element|expo|@expo/*|exponent|@exponent/*)"
-    ],
-    "setupFiles": [
-      "./jest-setup.js"
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
     ]
   }
 }

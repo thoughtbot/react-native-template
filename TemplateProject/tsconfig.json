@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "importHelpers": true,
+    "jsx": "react-native",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "paths": {
+      "*": [
+        "*",
+        "*.android",
+        "*.ios"
+      ]
+    },
+    "target": "es2015"
+  }
+}

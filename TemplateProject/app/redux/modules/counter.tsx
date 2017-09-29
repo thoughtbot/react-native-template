@@ -8,7 +8,7 @@ export const INITIAL_STATE = {
   value: 0,
 };
 
-export default function reducer(state = INITIAL_STATE, action) {
+export function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case INCREMENT:
       return { ...state, value: state.value + 1 };
