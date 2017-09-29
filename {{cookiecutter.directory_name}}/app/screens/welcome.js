@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import styles from '../styles';
+import React, { Component } from "react"
+import { Text, View } from "react-native"
+import styles from "../styles"
 
 class Welcome extends Component {
   static navigationOptions = {
-    title: '{{cookiecutter.project_name}}',
-  };
+    title: "{{cookiecutter.project_name}}",
+  }
 
   render() {
     return (
@@ -17,12 +17,12 @@ class Welcome extends Component {
           To get started, edit app/screens/welcome.js
         </Text>
         <Text style={[styles.instructions, styles.text]}>
-          Press Cmd+R to reload,{'\n'}
+          Press Cmd+R to reload,{"\n"}
           Cmd+D or shake for dev menu
         </Text>
       </View>
-    );
+    )
   }
-};
+}
 
-export default Welcome;
+export default Welcome

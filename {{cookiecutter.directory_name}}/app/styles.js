@@ -1,11 +1,11 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import React from "react"
+import { StyleSheet } from "react-native"
 
 const colors = {
-  primary: '#ed3e44',
-  secondary: '#29292c',
-  background: 'white',
-};
+  primary: "#ed3e44",
+  secondary: "#29292c",
+  background: "white",
+}
 
 const styles = StyleSheet.create({
   app: {
@@ -16,26 +16,26 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: colors.background,
   },
   welcome: {
     fontSize: 20,
-    textAlign: 'center',
+    textAlign: "center",
     margin: 10,
   },
   instructions: {
-    textAlign: 'center',
+    textAlign: "center",
     marginBottom: 5,
   },
   buttons: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   button: {
     margin: 5,
   },
-});
+})
 
-export { colors };
-export default styles;
+export { colors }
+export default styles

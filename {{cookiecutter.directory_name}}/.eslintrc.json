@@ -71,7 +71,7 @@
     "object-shorthand": 2,
     "operator-linebreak": [2, "after"],
     "arrow-parens": 0,
-    "semi": [2, "always"],
+    "semi": [2, "never"],
     "space-infix-ops": 2,
     "keyword-spacing": [
       2,
@@ -87,7 +87,7 @@
     "space-before-blocks": [2, "always"],
     "array-bracket-spacing": [2, "never"],
     "indent": [2, 2, { "SwitchCase": 1 }],
-    "quotes": [2, "single", { "avoidEscape": true }],
+    "quotes": [2, "double", { "avoidEscape": true }],
 
     "react-native/split-platform-components": 2,
     "react/display-name": 0,

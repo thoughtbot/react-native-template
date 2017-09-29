@@ -1,9 +1,9 @@
-import counterReducer from './counter';
+import counterReducer from "./counter"
 
-const initialState = {};
+const initialState = {}
 
 export default function(state = initialState, action) {
   return {
     counter: counterReducer(state.counter, action),
-  };
+  }
 }

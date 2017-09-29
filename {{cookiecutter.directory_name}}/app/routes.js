@@ -1,8 +1,8 @@
-import React from 'react';
-import { Platform } from 'react-native';
-import { StackNavigator, TabNavigator } from 'react-navigation';
-import { Counter, Welcome } from './screens';
-import { colors } from './styles';
+import React from "react"
+import { Platform } from "react-native"
+import { StackNavigator, TabNavigator } from "react-navigation"
+import { Counter, Welcome } from "./screens"
+import { colors } from "./styles"
 
 const stackConfig = {
   navigationOptions: {
@@ -11,7 +11,7 @@ const stackConfig = {
     },
     headerTintColor: colors.background,
   },
-};
+}
 
 const tabConfig = {
   tabBarOptions: Platform.select({
@@ -25,21 +25,28 @@ const tabConfig = {
       },
     },
   }),
-};
+}
 
-const WelcomeNavigator = StackNavigator({
-  Welcome: {screen: Welcome},
-}, stackConfig);
+const WelcomeNavigator = StackNavigator(
+  {
+    Welcome: { screen: Welcome },
+  },
+  stackConfig
+)
 
-const CounterNavigator = StackNavigator({
-  Counter: {screen: Counter},
-}, stackConfig);
+const CounterNavigator = StackNavigator(
+  {
+    Counter: { screen: Counter },
+  },
+  stackConfig
+)
 
-const AppNavigator = TabNavigator({
-  Welcome: {screen: WelcomeNavigator},
-  Counter: {screen: CounterNavigator},
-}, tabConfig);
+const AppNavigator = TabNavigator(
+  {
+    Welcome: { screen: WelcomeNavigator },
+    Counter: { screen: CounterNavigator },
+  },
+  tabConfig
+)
 
-export {
-  AppNavigator,
-};
+export { AppNavigator }
