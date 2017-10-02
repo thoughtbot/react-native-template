@@ -3,6 +3,7 @@
     ["module-resolver", {
       "alias": {
         "components": "./app/components",
+        "screens": "./app/screens",
       }
     }]
   ],
