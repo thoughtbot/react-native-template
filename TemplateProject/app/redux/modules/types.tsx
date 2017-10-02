@@ -1,3 +1,3 @@
-import { CounterAction } from "./counter/types";
+import { types as counter } from "modules/counter";
 
-export type AppAction = CounterAction;
+export type AppAction = counter.CounterAction;
