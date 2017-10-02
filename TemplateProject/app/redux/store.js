@@ -2,19 +2,16 @@ import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "remote-redux-devtools";
 import thunk from "redux-thunk";
 
-import rootReducer from "./modules";
+import { reducer } from "./reducer";
 
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk))
-);
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
 
 if (module.hot) {
   const acceptCallback = () => {
-    const nextRootReducer = require("./modules").default;
-    store.replaceReducer(nextRootReducer);
+    const nextReducer = require("./reducer").reducer;
+    store.replaceReducer(nextReducer);
   };
-  module.hot.accept("./modules", acceptCallback);
+  module.hot.accept("./reducer", acceptCallback);
   module.hot.acceptCallback = acceptCallback;
 }
 
