@@ -14,7 +14,7 @@ if ! command -v yarn >/dev/null; then
   exit 1
 fi
 
-yarn install
+yarn install --ignore-engines
 
 if ! command -v react-native; then
   echo >&2 "It looks like you don't have the React Native CLI installed."
