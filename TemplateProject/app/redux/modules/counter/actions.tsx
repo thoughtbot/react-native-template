@@ -1,19 +1,14 @@
-import * as types from "./types";
-
-export interface DecrementCounter {
-  type: types.DECREMENT;
-}
-
-export interface IncrementCounter {
-  type: types.INCREMENT;
-}
-
-export type CounterAction = DecrementCounter | IncrementCounter;
+import {
+  DECREMENT,
+  INCREMENT,
+  DecrementCounter,
+  IncrementCounter,
+} from "./types";
 
 export const decrement = (): DecrementCounter => ({
-  type: types.DECREMENT,
+  type: DECREMENT,
 });
 
 export const increment = (): IncrementCounter => ({
-  type: types.INCREMENT,
+  type: INCREMENT,
 });

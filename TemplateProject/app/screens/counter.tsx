@@ -4,6 +4,7 @@ import { connect, Dispatch } from "react-redux";
 
 import styles from "app/styles";
 import * as counter from "app/redux/modules/counter/actions";
+import { CounterAction } from "app/redux/modules/counter/types";
 import { AppState } from "app/types";
 
 export interface Props {
@@ -38,7 +39,7 @@ class Counter extends Component<Props> {
 
 const mapStateToProps = ({ counter }: AppState): Props => counter;
 
-const mapDispatchToProps = (dispatch: Dispatch<counter.CounterAction>): Props =>
+const mapDispatchToProps = (dispatch: Dispatch<CounterAction>): Props =>
   counter;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

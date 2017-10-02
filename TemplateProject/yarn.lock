@@ -6,11 +6,25 @@
   version "21.1.1"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-21.1.1.tgz#70008ecce439774a45c7d0b543d879ec58a1b332"
 
-"@types/react-native@^0.48.9":
+"@types/react-native@*", "@types/react-native@^0.48.9":
   version "0.48.9"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.48.9.tgz#7c4530643f5d77820f17c7a69278f4556cdb2f4a"
   dependencies:
     "@types/react" "*"
+
+"@types/react-navigation@^1.0.20":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@types/react-navigation/-/react-navigation-1.0.20.tgz#77a49ddbeaef46807192b0c797a654741b29266e"
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
+"@types/react-redux@^5.0.9":
+  version "5.0.9"
+  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-5.0.9.tgz#9bfe915356aa0b10d1b9211df0121a06aa7ec9af"
+  dependencies:
+    "@types/react" "*"
+    redux "^3.6.0"
 
 "@types/react@*", "@types/react@^16.0.7":
   version "16.0.7"

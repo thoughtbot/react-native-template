@@ -1,5 +1,5 @@
 import { CounterState } from "app/types";
-import { DECREMENT, INCREMENT } from "./types";
+import { DECREMENT, INCREMENT, CounterAction } from "./types";
 
 export const INITIAL_STATE: CounterState = {
   value: 0,
@@ -7,7 +7,7 @@ export const INITIAL_STATE: CounterState = {
 
 export function reducer(
   state: CounterState = INITIAL_STATE,
-  action
+  action: CounterAction
 ): CounterState {
   switch (action.type) {
     case INCREMENT:

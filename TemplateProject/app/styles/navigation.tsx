@@ -1,4 +1,5 @@
 import { Platform } from "react-native";
+import { TabViewConfig } from "react-navigation";
 
 import { colors } from "./colors";
 
@@ -11,15 +12,19 @@ const stackConfig = {
   },
 };
 
-const androidTabConfig = {
-  activeTintColor: colors.background,
-  style: {
-    backgroundColor: colors.primary,
+const androidTabConfig: TabViewConfig = {
+  tabBarOptions: {
+    activeTintColor: colors.background,
+    style: {
+      backgroundColor: colors.primary,
+    },
   },
 };
 
-const iosTabConfig = {
-  activeTintColor: colors.primary,
+const iosTabConfig: TabViewConfig = {
+  tabBarOptions: {
+    activeTintColor: colors.primary,
+  },
 };
 
 const tabConfig = Platform.select({
