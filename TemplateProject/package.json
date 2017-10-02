@@ -7,6 +7,7 @@
     "jest": "jest",
     "lint": "eslint .",
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "pretest": "tslint --project . --type-check",
     "test": "bin/test",
     "typecheck": "tslint --project . --type-check"
   },

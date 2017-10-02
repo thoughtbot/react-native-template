@@ -16,5 +16,12 @@
       ]
     },
     "target": "es2015"
-  }
+  },
+  "exclude": [
+    "node_modules/**/*"
+  ],
+  "include": [
+    "index.*",
+    "app/**/*"
+  ]
 }
