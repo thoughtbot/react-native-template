@@ -1,6 +1,7 @@
 import { AppState } from "app/types";
 import { AppAction } from "./types";
-import * as counter from "./counter/reducer";
+
+import { reducer as counter } from "modules/counter";
 
 const initialState: AppState = {
   counter: {
@@ -13,6 +14,6 @@ export default function(
   action: AppAction
 ): AppState {
   return {
-    counter: counter.reducer(state.counter, action),
+    counter: counter(state.counter, action),
   };
 }

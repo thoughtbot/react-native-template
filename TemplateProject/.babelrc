@@ -3,6 +3,7 @@
     ["module-resolver", {
       "alias": {
         "components": "./app/components",
+        "modules": "./app/redux/modules",
         "screens": "./app/screens",
       }
     }]

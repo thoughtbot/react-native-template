@@ -3,8 +3,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { connect, Dispatch } from "react-redux";
 
 import { styles } from "app/styles";
-import * as counterActions from "app/redux/modules/counter/actions";
-import { CounterAction } from "app/redux/modules/counter/types";
+import { actions } from "modules/counter";
 import { AppState } from "app/types";
 
 export interface Props {
@@ -39,6 +38,6 @@ class Counter extends Component<Props> {
 
 const mapStateToProps = ({ counter }: AppState): Props => counter;
 
-const mapDispatchToProps: Props = { ...counterActions };
+const mapDispatchToProps: Props = actions;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

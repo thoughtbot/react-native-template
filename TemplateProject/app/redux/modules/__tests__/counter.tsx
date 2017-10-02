@@ -1,10 +1,9 @@
-import { INITIAL_STATE, reducer } from "../counter/reducer";
-import { decrement, increment } from "../counter/actions";
+import { INITIAL_STATE, actions, reducer } from "../counter";
 
 test("increment", () => {
-  expect(reducer(INITIAL_STATE, increment())).toMatchSnapshot();
+  expect(reducer(INITIAL_STATE, actions.increment())).toMatchSnapshot();
 });
 
 test("decrement", () => {
-  expect(reducer(INITIAL_STATE, decrement())).toMatchSnapshot();
+  expect(reducer(INITIAL_STATE, actions.decrement())).toMatchSnapshot();
 });
