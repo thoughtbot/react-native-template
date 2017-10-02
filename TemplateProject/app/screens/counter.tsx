@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { connect, Dispatch } from "react-redux";
 
-import styles from "app/styles";
+import { styles } from "app/styles";
 import * as counterActions from "app/redux/modules/counter/actions";
 import { CounterAction } from "app/redux/modules/counter/types";
 import { AppState } from "app/types";

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
 
-import styles from "app/styles";
+import { styles } from "app/styles";
 
 class Welcome extends Component {
   static navigationOptions = {
