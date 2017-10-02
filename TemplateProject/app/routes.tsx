@@ -3,29 +3,7 @@ import { Platform } from "react-native";
 import { StackNavigator, TabNavigator } from "react-navigation";
 import { Counter, Welcome } from "./screens";
 import { colors } from "app/styles/colors";
-
-const stackConfig = {
-  navigationOptions: {
-    headerStyle: {
-      backgroundColor: colors.primary,
-    },
-    headerTintColor: colors.background,
-  },
-};
-
-const tabConfig = {
-  tabBarOptions: Platform.select({
-    ios: {
-      activeTintColor: colors.primary,
-    },
-    android: {
-      activeTintColor: colors.background,
-      style: {
-        backgroundColor: colors.primary,
-      },
-    },
-  }),
-};
+import { stackConfig, tabConfig } from "app/styles/navigation";
 
 const WelcomeNavigator = StackNavigator(
   {
