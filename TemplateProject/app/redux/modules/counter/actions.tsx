@@ -10,5 +10,10 @@ export interface IncrementCounter {
 
 export type CounterAction = DecrementCounter | IncrementCounter;
 
-export const decrement = () => ({});
-export const increment = () => ({ type: types.INCREMENT });
+export const decrement = (): DecrementCounter => ({
+  type: types.DECREMENT,
+});
+
+export const increment = (): IncrementCounter => ({
+  type: types.INCREMENT,
+});
