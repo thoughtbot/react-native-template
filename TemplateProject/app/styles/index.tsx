@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 
 import { colors } from "./colors";
+import * as navigation from "./navigation";
 
 const styles = StyleSheet.create({
   app: {
@@ -33,4 +34,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { styles };
+export { colors, navigation, styles };

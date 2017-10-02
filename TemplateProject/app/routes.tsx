@@ -3,21 +3,20 @@ import { Platform } from "react-native";
 import { StackNavigator, TabNavigator } from "react-navigation";
 
 import { Counter, Welcome } from "screens";
-import { colors } from "app/styles/colors";
-import { stackConfig, tabConfig } from "app/styles/navigation";
+import { colors, navigation } from "app/styles";
 
 const WelcomeNavigator = StackNavigator(
   {
     Welcome: { screen: Welcome },
   },
-  stackConfig
+  navigation.stackConfig
 );
 
 const CounterNavigator = StackNavigator(
   {
     Counter: { screen: Counter },
   },
-  stackConfig
+  navigation.stackConfig
 );
 
 const AppNavigator = TabNavigator(
@@ -25,7 +24,7 @@ const AppNavigator = TabNavigator(
     Welcome: { screen: WelcomeNavigator },
     Counter: { screen: CounterNavigator },
   },
-  tabConfig
+  navigation.tabConfig
 );
 
 export { AppNavigator };
