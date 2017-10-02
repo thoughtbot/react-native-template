@@ -1,16 +1,16 @@
-import React, { Component } from "react"
-import { Text, TouchableOpacity, View } from "react-native"
-import { connect } from "react-redux"
-import styles from "../styles"
-import * as counterActions from "../redux/modules/counter"
+import React, { Component } from "react";
+import { Text, TouchableOpacity, View } from "react-native";
+import { connect } from "react-redux";
+import styles from "../styles";
+import * as counterActions from "../redux/modules/counter";
 
 class Counter extends Component {
   static navigationOptions = {
     title: "Counter",
-  }
+  };
 
   render() {
-    const { value, increment, decrement } = this.props
+    const { value, increment, decrement } = this.props;
 
     return (
       <View style={styles.container}>
@@ -24,11 +24,11 @@ class Counter extends Component {
           </TouchableOpacity>
         </View>
       </View>
-    )
+    );
   }
 }
 
 export default connect(({ counter }) => counter, {
   increment: counterActions.increment,
   decrement: counterActions.decrement,
-})(Counter)
+})(Counter);

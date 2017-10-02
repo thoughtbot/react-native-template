@@ -1,11 +1,11 @@
-import React from "react"
-import { StyleSheet } from "react-native"
+import React from "react";
+import { StyleSheet } from "react-native";
 
 const colors = {
   primary: "#ed3e44",
   secondary: "#29292c",
   background: "white",
-}
+};
 
 const styles = StyleSheet.create({
   app: {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   button: {
     margin: 5,
   },
-})
+});
 
-export { colors }
-export default styles
+export { colors };
+export default styles;
