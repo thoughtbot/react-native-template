@@ -1,4 +1,11 @@
 {
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "components": "./app/components",
+      }
+    }]
+  ],
   "presets": ["react-native"],
   "sourceMaps": "inline"
 }
