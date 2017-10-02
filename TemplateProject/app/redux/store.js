@@ -18,4 +18,4 @@ if (module.hot) {
   module.hot.acceptCallback = acceptCallback;
 }
 
-export default store;
+export { store };

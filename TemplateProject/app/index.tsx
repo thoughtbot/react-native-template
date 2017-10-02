@@ -3,7 +3,7 @@ import { AppRegistry } from "react-native";
 import { Provider } from "react-redux";
 
 import { App } from "components";
-import store from "./redux/store";
+import { store } from "app/redux/store";
 
 const TemplateProject = () => {
   return (
