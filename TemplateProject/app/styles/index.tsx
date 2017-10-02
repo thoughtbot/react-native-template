@@ -1,11 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 
-const colors = {
-  primary: "#ed3e44",
-  secondary: "#29292c",
-  background: "white",
-};
+import { colors } from "./colors";
 
 const styles = StyleSheet.create({
   app: {
@@ -37,5 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { colors };
 export default styles;

@@ -2,7 +2,7 @@ import React from "react";
 import { Platform } from "react-native";
 import { StackNavigator, TabNavigator } from "react-navigation";
 import { Counter, Welcome } from "./screens";
-import { colors } from "./styles";
+import { colors } from "app/styles/colors";
 
 const stackConfig = {
   navigationOptions: {
