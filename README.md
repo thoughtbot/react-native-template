@@ -9,21 +9,25 @@ Inspired by [suspenders], and [django-template].
 
 ## What's in the template?
 
+- [typescript][]
 - [yarn][]
 - [redux][] and [redux-thunk][]
 - [remote-redux-devtools][]
 - [react-navigation][]
 - [react-native-config][]
+- [prettier][]
 - [eslint][]
 - [jest][]
 - ...and an example app to use as a starting point
 
+[typescript]: http://www.typescriptlang.org
 [yarn]: https://yarnpkg.com/
 [redux]: http://redux.js.org/
 [redux-thunk]: https://github.com/gaearon/redux-thunk
 [remote-redux-devtools]: https://github.com/zalmoxisus/remote-redux-devtools
 [react-navigation]: https://reactnavigation.org/
 [react-native-config]: https://github.com/luggit/react-native-config
+[prettier]: https://prettier.io
 [eslint]: http://eslint.org/
 [jest]: https://facebook.github.io/jest/
 
