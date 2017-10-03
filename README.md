@@ -13,6 +13,7 @@ Inspired by [suspenders], and [django-template].
 - [yarn][]
 - [redux][] and [redux-thunk][]
 - [remote-redux-devtools][]
+- [babel-plugin-module-resolver][]
 - [react-navigation][]
 - [react-native-config][]
 - [prettier][]
@@ -25,6 +26,7 @@ Inspired by [suspenders], and [django-template].
 [redux]: http://redux.js.org/
 [redux-thunk]: https://github.com/gaearon/redux-thunk
 [remote-redux-devtools]: https://github.com/zalmoxisus/remote-redux-devtools
+[babel-plugin-module-resolver]: https://github.com/tleunen/babel-plugin-module-resolver
 [react-navigation]: https://reactnavigation.org/
 [react-native-config]: https://github.com/luggit/react-native-config
 [prettier]: https://prettier.io
