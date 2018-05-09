@@ -1,6 +1,6 @@
 import React from "react";
 import { Platform } from "react-native";
-import { StackNavigator, TabNavigator } from "react-navigation";
+import { createStackNavigator, createTabNavigator } from "react-navigation";
 import { Counter, Welcome } from "./screens";
 import { colors } from "./styles";
 
@@ -27,21 +27,21 @@ const tabConfig = {
   }),
 };
 
-const WelcomeNavigator = StackNavigator(
+const WelcomeNavigator = createStackNavigator(
   {
     Welcome: { screen: Welcome },
   },
   stackConfig
 );
 
-const CounterNavigator = StackNavigator(
+const CounterNavigator = createStackNavigator(
   {
     Counter: { screen: Counter },
   },
   stackConfig
 );
 
-const AppNavigator = TabNavigator(
+const AppNavigator = createTabNavigator(
   {
     Welcome: { screen: WelcomeNavigator },
     Counter: { screen: CounterNavigator },
