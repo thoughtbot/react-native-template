@@ -10,27 +10,27 @@
     "test": "bin/test"
   },
   "dependencies": {
-    "react": "16.2.0",
-    "react-native": "0.52.0",
+    "react": "16.3.2",
+    "react-native": "0.55.4",
     "react-native-config": "^0.11.5",
-    "react-navigation": "1.0.0-beta.26",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
+    "react-navigation": "2.0.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^7.2.1",
-    "babel-jest": "^19.0.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.3",
     "babel-preset-react-native": "^4.0.0",
-    "eslint": "^3.19.0",
-    "eslint-plugin-react": "^6.10.3",
-    "eslint-plugin-react-native": "^2.3.1",
-    "jest": "^19.0.2",
-    "prettier": "^1.7.2",
-    "react-test-renderer": "16.2.0",
-    "redux-mock-store": "^1.2.2",
-    "remote-redux-devtools": "^0.5.7"
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-react-native": "^3.2.1",
+    "jest": "^22.4.3",
+    "prettier": "^1.12.1",
+    "react-test-renderer": "16.3.2",
+    "redux-mock-store": "^1.5.1",
+    "remote-redux-devtools": "^0.5.12"
   },
   "jest": {
     "preset": "react-native",
