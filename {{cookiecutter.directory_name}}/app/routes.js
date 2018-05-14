@@ -1,6 +1,6 @@
 import React from "react";
 import { Platform } from "react-native";
-import { createStackNavigator, createTabNavigator } from "react-navigation";
+import { createStackNavigator, createBottomTabNavigator, createMaterialTopTabNavigator } from "react-navigation";
 import { Counter, Welcome } from "./screens";
 import { colors } from "./styles";
 
@@ -13,19 +13,31 @@ const stackConfig = {
   },
 };
 
-const tabConfig = {
-  tabBarOptions: Platform.select({
-    ios: {
-      activeTintColor: colors.primary,
-    },
-    android: {
-      activeTintColor: colors.background,
-      style: {
-        backgroundColor: colors.primary,
-      },
-    },
-  }),
-};
+const createTabNavigator = Platform.select({
+  ios: (config) => {
+    return createBottomTabNavigator(
+      config,
+      {
+        tabBarOptions: {
+          activeTintColor: colors.primary,
+        },
+      }
+    );
+  },
+  android: (config) => {
+    return createMaterialTopTabNavigator(
+      config,
+      {
+        tabBarOptions: {
+          activeTintColor: colors.background,
+          style: {
+            backgroundColor: colors.primary,
+          },
+        },
+      }
+    );
+  },
+});
 
 const WelcomeNavigator = createStackNavigator(
   {
@@ -45,8 +57,7 @@ const AppNavigator = createTabNavigator(
   {
     Welcome: { screen: WelcomeNavigator },
     Counter: { screen: CounterNavigator },
-  },
-  tabConfig
+  }
 );
 
 export { AppNavigator };
