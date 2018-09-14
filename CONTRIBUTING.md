@@ -10,6 +10,18 @@ We expect everyone to follow the code of conduct
 anywhere in thoughtbot's project codebases,
 issue trackers, chatrooms, and mailing lists.
 
+## Prerequisites
+
+Contributing to React Native Template requires you to install [`rename`]. If
+you're on macOS, you can install `rename` with [Homebrew]:
+
+```
+$ brew install rename
+```
+
+[`rename`]: http://plasmasturm.org/code/rename/
+[Homebrew]: https://brew.sh
+
 ## Contributing Code
 
 Make your change. Follow the [style guide][style].
