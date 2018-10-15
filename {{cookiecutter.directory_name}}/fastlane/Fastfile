@@ -14,15 +14,17 @@ lane :bump_version do |options|
 end
 
 platform :ios do
-  desc "Build the app with the specified `scheme`. Defaults to `{{cookiecutter.project_name}}`."
+  desc "Build the app with the specified `scheme`. Defaults to `TemplateProject`."
   lane :build do |options|
-    scheme = options.fetch(:scheme, "{{cookiecutter.project_name}}")
+    scheme = options.fetch(:scheme, "TemplateProject")
 
     gym(scheme: scheme, include_bitcode: true)
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
   lane :beta do
+    #cocoapods
+    installDependencies
     build
     testflight
   end
@@ -32,10 +34,15 @@ platform :android do
   desc "Build the app apk for the specified build `type`. Defaults to `Release`"
   lane :build do |options|
     type = options.fetch(:type, "Release")
-
+    
+    installDependencies
     gradle(task: "clean")
     gradle(task: "assemble", build_type: type)
   end
+end
+
+def installDependencies()
+  sh 'yarn install --pure-lockfile'
 end
 
 def update_android_version_name(version:)
@@ -61,8 +68,8 @@ def commit_tag_and_push_version_bump
   git_commit(
     path: [
       "android/app/build.gradle",
-      "ios/{{cookiecutter.project_name}}/Info.plist",
-      "ios/{{cookiecutter.project_name}}Tests/Info.plist",
+      "ios/TemplateProject/Info.plist",
+      "ios/TemplateProjectTests/Info.plist",
     ],
     message: "Bump version to #{version_number} (#{build_number})",
   )

@@ -23,6 +23,8 @@ platform :ios do
 
   desc "Submit a new Beta Build to Apple TestFlight"
   lane :beta do
+    #cocoapods
+    installDependencies
     build
     testflight
   end
@@ -32,10 +34,15 @@ platform :android do
   desc "Build the app apk for the specified build `type`. Defaults to `Release`"
   lane :build do |options|
     type = options.fetch(:type, "Release")
-
+    
+    installDependencies
     gradle(task: "clean")
     gradle(task: "assemble", build_type: type)
   end
+end
+
+def installDependencies()
+  sh 'yarn install --pure-lockfile'
 end
 
 def update_android_version_name(version:)
