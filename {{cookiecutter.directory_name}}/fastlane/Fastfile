@@ -75,3 +75,4 @@ def commit_tag_and_push_version_bump
   )
   add_git_tag(tag: "v#{version_number}+#{build_number}")
   push_to_git_remote
+end
