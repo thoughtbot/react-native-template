@@ -19,28 +19,22 @@ const stackConfig = {
 };
 
 const createTabNavigator = Platform.select({
-  ios: (config) => {
-    return createBottomTabNavigator(
-      config,
-      {
-        tabBarOptions: {
-          activeTintColor: colors.primary,
-        },
-      }
-    );
+  ios: config => {
+    return createBottomTabNavigator(config, {
+      tabBarOptions: {
+        activeTintColor: colors.primary,
+      },
+    });
   },
-  android: (config) => {
-    return createMaterialTopTabNavigator(
-      config,
-      {
-        tabBarOptions: {
-          activeTintColor: colors.background,
-          style: {
-            backgroundColor: colors.primary,
-          },
+  android: config => {
+    return createMaterialTopTabNavigator(config, {
+      tabBarOptions: {
+        activeTintColor: colors.background,
+        style: {
+          backgroundColor: colors.primary,
         },
-      }
-    );
+      },
+    });
   },
 });
 
@@ -58,11 +52,9 @@ const CounterNavigator = createStackNavigator(
   stackConfig
 );
 
-const AppNavigator = createTabNavigator(
-  {
-    Welcome: { screen: WelcomeNavigator },
-    Counter: { screen: CounterNavigator },
-  }
-);
+const AppNavigator = createTabNavigator({
+  Welcome: { screen: WelcomeNavigator },
+  Counter: { screen: CounterNavigator },
+});
 
 export default createAppContainer(AppNavigator);

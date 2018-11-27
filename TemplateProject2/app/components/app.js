@@ -12,7 +12,7 @@ class App extends Component {
         <StatusBar barStyle="light-content" />
         <AppNavigator />
       </View>
-    )
+    );
   }
 }
 
