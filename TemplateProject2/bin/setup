@@ -1,0 +1,38 @@
+#!/bin/sh
+
+set -e
+
+# Set up Ruby dependencies via Bundler
+gem install bundler --conservative
+bundle check || bundle install
+
+if ! command -v yarn >/dev/null; then
+  echo >&2 "It looks like you don't have Yarn installed:"
+  echo >&2 "see https://yarnpkg.com/docs/install for instructions."
+  echo >&2
+  echo >&2 "After installing Yarn, navigate to the project directory and run 'bin/setup'."
+  exit 1
+fi
+
+yarn install
+
+if ! command -v react-native; then
+  echo >&2 "It looks like you don't have the React Native CLI installed."
+  echo >&2 "You can install it by running:"
+  echo >&2
+  echo >&2 "    yarn global add react-native-cli"
+  echo >&2
+  echo >&2 "See https://facebook.github.io/react-native/docs/getting-started.html"
+  echo >&2 "for more information."
+  exit 1
+fi
+
+if [ ! -f .env.local ]; then
+  echo "Copying .sample.env to .env.local"
+  cp .sample.env .env.local
+fi
+
+if [ ! -f .env ]; then
+  echo "Copying .sample.env to .env.production"
+  cp .sample.env .env.production
+fi
