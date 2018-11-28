@@ -1,17 +1,12 @@
 import React from "react";
 import { AppRegistry } from "react-native";
-import { Provider } from "react-redux";
 import { App } from "./components";
-import store from "./redux/store";
+import { name as appName } from "../app.json";
 
-const TemplateProject = () => {
-  return (
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
+const {{cookiecutter.project_name}} = () => {
+  return <App />;
 };
 
-export default TemplateProject;
+export default {{cookiecutter.project_name}};
 
-AppRegistry.registerComponent("TemplateProject", () => TemplateProject);
+AppRegistry.registerComponent("{{cookiecutter.project_name}}", () => {{cookiecutter.project_name}});

@@ -1,6 +1,11 @@
 import React from "react";
 import { Platform } from "react-native";
-import { StackNavigator, TabNavigator } from "react-navigation";
+import {
+  createStackNavigator,
+  createBottomTabNavigator,
+  createMaterialTopTabNavigator,
+  createAppContainer,
+} from "react-navigation";
 import { Counter, Welcome } from "./screens";
 import { colors } from "./styles";
 
@@ -13,40 +18,43 @@ const stackConfig = {
   },
 };
 
-const tabConfig = {
-  tabBarOptions: Platform.select({
-    ios: {
-      activeTintColor: colors.primary,
-    },
-    android: {
-      activeTintColor: colors.background,
-      style: {
-        backgroundColor: colors.primary,
+const createTabNavigator = Platform.select({
+  ios: config => {
+    return createBottomTabNavigator(config, {
+      tabBarOptions: {
+        activeTintColor: colors.primary,
       },
-    },
-  }),
-};
+    });
+  },
+  android: config => {
+    return createMaterialTopTabNavigator(config, {
+      tabBarOptions: {
+        activeTintColor: colors.background,
+        style: {
+          backgroundColor: colors.primary,
+        },
+      },
+    });
+  },
+});
 
-const WelcomeNavigator = StackNavigator(
+const WelcomeNavigator = createStackNavigator(
   {
     Welcome: { screen: Welcome },
   },
   stackConfig
 );
 
-const CounterNavigator = StackNavigator(
+const CounterNavigator = createStackNavigator(
   {
     Counter: { screen: Counter },
   },
   stackConfig
 );
 
-const AppNavigator = TabNavigator(
-  {
-    Welcome: { screen: WelcomeNavigator },
-    Counter: { screen: CounterNavigator },
-  },
-  tabConfig
-);
+const AppNavigator = createTabNavigator({
+  Welcome: { screen: WelcomeNavigator },
+  Counter: { screen: CounterNavigator },
+});
 
-export { AppNavigator };
+export default createAppContainer(AppNavigator);

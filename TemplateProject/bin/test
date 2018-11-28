@@ -3,4 +3,4 @@
 set -e
 
 yarn lint
-yarn jest -- "$@"
+yarn jest "$@"
