@@ -1,3 +1,3 @@
 <resources>
-    <string name="app_name">{{cookiecutter.project_name}}</string>
+    <string name="app_name">TemplateProject2</string>
 </resources>
