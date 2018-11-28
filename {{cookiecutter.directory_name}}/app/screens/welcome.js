@@ -4,7 +4,7 @@ import styles from "../styles";
 
 class Welcome extends Component {
   static navigationOptions = {
-    title: "TemplateProject",
+    title: "{{cookiecutter.project_name}}",
   };
 
   render() {

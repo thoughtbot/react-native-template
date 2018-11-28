@@ -15,9 +15,9 @@ end
 
 platform :ios do
   desc "Build the app with the specified `scheme`. Defaults to
-`{{cookiecutter.project_name}}`."
+`TemplateProject`."
   lane :build do |options|
-    scheme = options.fetch(:scheme, "{{cookiecutter.project_name}}")
+    scheme = options.fetch(:scheme, "TemplateProject")
 
     gym(scheme: scheme, include_bitcode: true)
   end
@@ -62,8 +62,8 @@ def commit_tag_and_push_version_bump
   git_commit(
     path: [
       "android/app/build.gradle",
-      "ios/{{cookiecutter.project_name}}/Info.plist",
-      "ios/{{cookiecutter.project_name}}/Info.plist",
+      "ios/{{TemplateProject}}/Info.plist",
+      "ios/{{TemplateProject}}/Info.plist",
     ],
     message: "Bump version to #{version_number} (#{build_number})",
   )

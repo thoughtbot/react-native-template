@@ -3,10 +3,10 @@ import { AppRegistry } from "react-native";
 import { App } from "./components";
 import { name as appName } from "../app.json";
 
-const {{cookiecutter.project_name}} = () => {
+const TemplateProject = () => {
   return <App />;
 };
 
-export default {{cookiecutter.project_name}};
+export default TemplateProject;
 
-AppRegistry.registerComponent("{{cookiecutter.project_name}}", () => {{cookiecutter.project_name}});
+AppRegistry.registerComponent(appName, () => TemplateProject);
