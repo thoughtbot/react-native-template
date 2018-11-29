@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "TemplateProject-tvOS.app"
-               BlueprintName = "TemplateProject-tvOS"
-               ReferencedContainer = "container:TemplateProject.xcodeproj">
+               BuildableName = "{{cookiecutter.project_name}}-tvOS.app"
+               BlueprintName = "{{cookiecutter.project_name}}-tvOS"
+               ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "TemplateProject-tvOSTests.xctest"
-               BlueprintName = "TemplateProject-tvOSTests"
-               ReferencedContainer = "container:TemplateProject.xcodeproj">
+               BuildableName = "{{cookiecutter.project_name}}-tvOSTests.xctest"
+               BlueprintName = "{{cookiecutter.project_name}}-tvOSTests"
+               ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "TemplateProject-tvOSTests.xctest"
-               BlueprintName = "TemplateProject-tvOSTests"
-               ReferencedContainer = "container:TemplateProject.xcodeproj">
+               BuildableName = "{{cookiecutter.project_name}}-tvOSTests.xctest"
+               BlueprintName = "{{cookiecutter.project_name}}-tvOSTests"
+               ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "TemplateProject-tvOS.app"
-            BlueprintName = "TemplateProject-tvOS"
-            ReferencedContainer = "container:TemplateProject.xcodeproj">
+            BuildableName = "{{cookiecutter.project_name}}-tvOS.app"
+            BlueprintName = "{{cookiecutter.project_name}}-tvOS"
+            ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "TemplateProject-tvOS.app"
-            BlueprintName = "TemplateProject-tvOS"
-            ReferencedContainer = "container:TemplateProject.xcodeproj">
+            BuildableName = "{{cookiecutter.project_name}}-tvOS.app"
+            BlueprintName = "{{cookiecutter.project_name}}-tvOS"
+            ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "TemplateProject-tvOS.app"
-            BlueprintName = "TemplateProject-tvOS"
-            ReferencedContainer = "container:TemplateProject.xcodeproj">
+            BuildableName = "{{cookiecutter.project_name}}-tvOS.app"
+            BlueprintName = "{{cookiecutter.project_name}}-tvOS"
+            ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

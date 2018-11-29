@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "TemplateProject.app"
-               BlueprintName = "TemplateProject"
-               ReferencedContainer = "container:TemplateProject.xcodeproj">
+               BuildableName = "{{cookiecutter.project_name}}.app"
+               BlueprintName = "{{cookiecutter.project_name}}"
+               ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "TemplateProjectTests.xctest"
-               BlueprintName = "TemplateProjectTests"
-               ReferencedContainer = "container:TemplateProject.xcodeproj">
+               BuildableName = "{{cookiecutter.project_name}}Tests.xctest"
+               BlueprintName = "{{cookiecutter.project_name}}Tests"
+               ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "TemplateProjectTests.xctest"
-               BlueprintName = "TemplateProjectTests"
-               ReferencedContainer = "container:TemplateProject.xcodeproj">
+               BuildableName = "{{cookiecutter.project_name}}Tests.xctest"
+               BlueprintName = "{{cookiecutter.project_name}}Tests"
+               ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "TemplateProject.app"
-            BlueprintName = "TemplateProject"
-            ReferencedContainer = "container:TemplateProject.xcodeproj">
+            BuildableName = "{{cookiecutter.project_name}}.app"
+            BlueprintName = "{{cookiecutter.project_name}}"
+            ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "TemplateProject.app"
-            BlueprintName = "TemplateProject"
-            ReferencedContainer = "container:TemplateProject.xcodeproj">
+            BuildableName = "{{cookiecutter.project_name}}.app"
+            BlueprintName = "{{cookiecutter.project_name}}"
+            ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "TemplateProject.app"
-            BlueprintName = "TemplateProject"
-            ReferencedContainer = "container:TemplateProject.xcodeproj">
+            BuildableName = "{{cookiecutter.project_name}}.app"
+            BlueprintName = "{{cookiecutter.project_name}}"
+            ReferencedContainer = "container:{{cookiecutter.project_name}}.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
